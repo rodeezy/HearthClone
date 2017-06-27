@@ -1,21 +1,18 @@
 # == Schema Information
 #
-# Table name: cards
+# Table name: decks
 #
 #  id         :integer          not null, primary key
-#  attack     :integer          not null
-#  defense    :integer          not null
-#  cost       :integer          not null
-#  powerup    :string
+#  owner_id   :integer          not null
+#  class      :string           not null
 #  name       :string           not null
-#  type       :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
 require 'test_helper'
 
-class CardTest < ActiveSupport::TestCase
+class DeckTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
