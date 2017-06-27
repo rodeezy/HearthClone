@@ -11,4 +11,9 @@
 #
 
 class Deck < ApplicationRecord
+  validates :owner_id, :class, :name, presence: true
+
+  belongs_to :owner, class_name: :User
+  has_many :deck_cards
+  has_many :cards through: :deck_cards
 end

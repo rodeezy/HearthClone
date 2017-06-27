@@ -14,5 +14,9 @@
 #
 
 class Card < ApplicationRecord
+  validates :attack, :defense, :cost, :name, :type, presence: true
+  validates :name, uniqueness: true
 
+  has_many :deck_cards
+  has_many :decks, through: :deck_cards
 end
