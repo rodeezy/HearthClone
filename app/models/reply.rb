@@ -12,5 +12,5 @@
 #  updated_at :datetime         not null
 #
 
-class CardPostCommentReply < ApplicationRecord
+class Reply < ApplicationRecord
 end
