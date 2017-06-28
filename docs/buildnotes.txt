@@ -1,1 +1,3 @@
 Gonna go ahead and make some UserCards
+
+AWS instead of Heroku? Needs to be dank
