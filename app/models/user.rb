@@ -16,4 +16,6 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
 
   has_many :decks, foreign_key: :owner_id
+  has_many :card_posts, foreign_key: :author_id
+  has_many :image_posts, foreign_key: :author_id
 end

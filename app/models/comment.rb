@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: card_post_comments
+# Table name: comments
 #
 #  id         :integer          not null, primary key
 #  author_id  :integer          not null
@@ -10,6 +10,7 @@
 #  downvotes  :integer          default("0")
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  post_type  :string           not null
 #
 
 class Comment < ApplicationRecord
@@ -17,4 +18,5 @@ class Comment < ApplicationRecord
 
   belongs_to :author, class_name: :User
   belongs_to :post, polymorphic: true
+  has_many :replies
 end

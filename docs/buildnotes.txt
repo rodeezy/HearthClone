@@ -18,3 +18,13 @@ Not sure if you can have like post_id for comments belong to cardposts and cardp
 therefore might want to change cardpostcomments to just comments
 but maybe not, so gonna leave it for now
 nah fuck it im changing it
+
+wanted to change up and downvotes to default: 0 instead of null: false. I have both now but I think its chill
+so im just not gonna make a model validation for presence
+
+not worrying about replies having replies (yet at least)
+
+https://gist.github.com/runemadsen/1242485 is a good article on reverse polymorphism,
+but for now i'm just gonna have a user have many imageposts and cardposts separately :/
+
+funny... i used 'be annotate' to kinda check buildtime errors. lol. p tite.

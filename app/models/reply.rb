@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: card_post_comment_replies
+# Table name: replies
 #
 #  id         :integer          not null, primary key
 #  author_id  :integer          not null
@@ -13,4 +13,7 @@
 #
 
 class Reply < ApplicationRecord
+  validates :author_id, :comment_id, :body, presence: true
+
+  belongs_to :comment
 end
