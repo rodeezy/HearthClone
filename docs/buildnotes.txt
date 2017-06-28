@@ -35,3 +35,5 @@ funny... i used 'be annotate' to kinda check buildtime errors. lol. p tite.
 
 Check card and cardpost validation to update types. Gonna start off with some basic ones.
 ‘Minion’ means just a plain old minion.
+
+changing 'type' to 'class' for rails reasons... although 'class' isn't so great either...

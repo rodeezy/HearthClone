@@ -11,9 +11,10 @@
 #  powerup     :string
 #  upvotes     :integer          default("0")
 #  downvotes   :integer          default("0")
-#  type        :string           not null
+#  class       :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  name        :string           not null
 #
 
 require 'test_helper'
