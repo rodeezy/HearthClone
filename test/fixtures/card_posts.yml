@@ -11,7 +11,7 @@
 #  powerup     :string
 #  upvotes     :integer          default("0")
 #  downvotes   :integer          default("0")
-#  class       :string           not null
+#  card_type   :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  name        :string           not null

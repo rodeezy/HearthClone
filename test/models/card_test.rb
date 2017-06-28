@@ -8,7 +8,7 @@
 #  cost       :integer          not null
 #  powerup    :string
 #  name       :string           not null
-#  class      :string           not null
+#  card_type  :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #

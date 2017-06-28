@@ -31,9 +31,12 @@ funny... i used 'be annotate' to kinda check buildtime errors. lol. p tite.
 
 7/28 3:26 PM -- time to test basic models
 —Users p chillin
+—Cards p chillin
 
+Check card and cardpost validation to update types (now called card_type). Gonna start off with some basic ones.
+‘Minion’ means just a plain old minion. might add card_types to db later.
+Samesies for decks and classes ('warlock','mage',...)
 
-Check card and cardpost validation to update types. Gonna start off with some basic ones.
-‘Minion’ means just a plain old minion.
+might wanna make validation that decks have 30 cards. also might not need a deckcard model.
 
-changing 'type' to 'class' for rails reasons... although 'class' isn't so great either...
+so "class" and "type" for column names are no-no's

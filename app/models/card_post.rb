@@ -11,15 +11,15 @@
 #  powerup     :string
 #  upvotes     :integer          default("0")
 #  downvotes   :integer          default("0")
-#  class       :string           not null
+#  card_type   :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  name        :string           not null
 #
 
 class CardPost < ApplicationRecord
-  validates :author_id, :attack, :defense, :cost, :type, :name, presence: true
-  validates :class, inclusion: ['minion', 'elemental', 'beast', 'murloc', 'dragon', 'spell']
+  validates :author_id, :attack, :defense, :cost, :card_type, :name, presence: true
+  validates :card_type, inclusion: ['minion', 'elemental', 'beast', 'murloc', 'dragon', 'spell']
 
   has_many :comments, as: :post
   has_many :image_posts, foreign_key: :post_id
