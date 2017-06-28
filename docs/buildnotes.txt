@@ -8,3 +8,5 @@ and people can vote and comment on them.
 and subposts for image art to go along with proposed cards that can also be voted on.
 dank.
 like a decentralized card playing game.
+
+Probably gonna have to have a backend for game and like game transactions/history.

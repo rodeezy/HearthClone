@@ -10,10 +10,55 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170627200934) do
+ActiveRecord::Schema.define(version: 20170628213328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "card_post_comment_replies", force: :cascade do |t|
+    t.integer  "author_id",              null: false
+    t.integer  "comment_id",             null: false
+    t.text     "body",                   null: false
+    t.integer  "upvotes",    default: 0
+    t.integer  "downvotes",  default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "card_post_comments", force: :cascade do |t|
+    t.integer  "author_id",              null: false
+    t.integer  "post_id",                null: false
+    t.text     "body",                   null: false
+    t.integer  "upvotes",    default: 0
+    t.integer  "downvotes",  default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "card_post_image_posts", force: :cascade do |t|
+    t.integer  "author_id",   null: false
+    t.integer  "post_id",     null: false
+    t.string   "image_url",   null: false
+    t.integer  "upvotes",     null: false
+    t.integer  "downvotes",   null: false
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "card_posts", force: :cascade do |t|
+    t.integer  "author_id",               null: false
+    t.text     "description"
+    t.integer  "attack",                  null: false
+    t.integer  "defense",                 null: false
+    t.integer  "cost",                    null: false
+    t.string   "powerup"
+    t.integer  "upvotes",     default: 0
+    t.integer  "downvotes",   default: 0
+    t.string   "type",                    null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "cards", force: :cascade do |t|
     t.integer  "attack",     null: false
