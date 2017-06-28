@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170628213328) do
+ActiveRecord::Schema.define(version: 20170628215509) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170628213328) do
     t.integer  "downvotes",  default: 0
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+    t.string   "post_type",              null: false
   end
 
   create_table "card_post_image_posts", force: :cascade do |t|

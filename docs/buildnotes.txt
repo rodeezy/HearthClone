@@ -10,3 +10,10 @@ dank.
 like a decentralized card playing game.
 
 Probably gonna have to have a backend for game and like game transactions/history.
+
+Not sure if you can have like post_id for comments belong to cardposts and cardpostimageposts ??
+... or like how exactly to implement it. here goes nothing
+---StackOverflow dude recommended an implementation of polymorphisms. gonna try that
+
+therefore might want to change cardpostcomments to just comments
+but maybe not, so gonna leave it for now

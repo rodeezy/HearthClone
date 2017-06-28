@@ -13,4 +13,7 @@
 #
 
 class CardPostComment < ApplicationRecord
+  validates :author_id, :post_id, :body, presence: true
+
+  belongs_to :author, class_name: :User
 end
