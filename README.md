@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sup y'all. I fuggin love HearthStone, and I have some dope ideas for a dank clone.
+Super excited to start a new coding project that I'm passionate about.
+Thank y'all for joining me.
 
-Things you may want to cover:
+Production README coming soon.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+More professional and/or better development README coming sooner (maybe)
