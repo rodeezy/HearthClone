@@ -14,4 +14,8 @@
 #
 
 class ImagePost < ApplicationRecord
+
+  has_many :comments, as: :post
+  belongs_to :card_post
+  belongs_to :author, class_name: :User
 end
