@@ -19,7 +19,7 @@
 
 class CardPost < ApplicationRecord
   validates :author_id, :attack, :defense, :cost, :type, :name, presence: true
-  validates :type, inclusion: ['minion', 'elemental', 'beast', 'murloc', 'dragon', 'spell']
+  validates :class, inclusion: ['minion', 'elemental', 'beast', 'murloc', 'dragon', 'spell']
 
   has_many :comments, as: :post
   has_many :image_posts, foreign_key: :post_id
