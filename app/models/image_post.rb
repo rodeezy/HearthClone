@@ -13,5 +13,5 @@
 #  updated_at  :datetime         not null
 #
 
-class CardPostImagePost < ApplicationRecord
+class ImagePost < ApplicationRecord
 end

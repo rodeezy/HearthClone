@@ -20,6 +20,6 @@ class CardPost < ApplicationRecord
   validates :author_id, :attack, :defense, :cost, :type, presence: true
 
   has_many :comments, as: :post
-  has_many :image_posts, class_name: :CardPostImagePost, foreign_key: :post_id
+  has_many :image_posts, foreign_key: :post_id
   belongs_to :author, class_name: :User
 end
