@@ -16,6 +16,7 @@
 class Card < ApplicationRecord
   validates :attack, :defense, :cost, :name, :type, presence: true
   validates :name, uniqueness: true
+  validates :type, in: { 'minion', 'elemental', 'beast', 'murloc', 'dragon', 'spell' }
 
   has_many :deck_cards
   has_many :decks, through: :deck_cards

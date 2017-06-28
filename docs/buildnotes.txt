@@ -28,3 +28,10 @@ https://gist.github.com/runemadsen/1242485 is a good article on reverse polymorp
 but for now i'm just gonna have a user have many imageposts and cardposts separately :/
 
 funny... i used 'be annotate' to kinda check buildtime errors. lol. p tite.
+
+7/28 3:26 PM -- time to test basic models
+—Users p chillin
+
+
+Check card and cardpost validation to update types. Gonna start off with some basic ones.
+‘Minion’ means just a plain old minion.
