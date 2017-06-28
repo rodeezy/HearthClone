@@ -32,6 +32,10 @@ funny... i used 'be annotate' to kinda check buildtime errors. lol. p tite.
 7/28 3:26 PM -- time to test basic models
 —Users p chillin
 —Cards p chillin
+--deck and deck <-> users p chillin
+--deck<->cards and deckCards p chillin
+...
+--its all good
 
 Check card and cardpost validation to update types (now called card_type). Gonna start off with some basic ones.
 ‘Minion’ means just a plain old minion. might add card_types to db later.
