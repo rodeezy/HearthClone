@@ -17,3 +17,4 @@ Not sure if you can have like post_id for comments belong to cardposts and cardp
 
 therefore might want to change cardpostcomments to just comments
 but maybe not, so gonna leave it for now
+nah fuck it im changing it
