@@ -121,3 +121,9 @@ shit... might wanna make comments more flexible
 i.e. like no replies. just comments can be on comments too.
 
 maybe also a 1-10 rating and you can sort by net votes, or by average rating.
+
+working on ImagePostsController. potentially will have a lot to test
+--REMEMBER TO TEST NEW/CREATE
+(CANT REALLY DO THAT YET)
+
+i'll probably need to do some shit so that people can't upvote/downvote a post multiple times
