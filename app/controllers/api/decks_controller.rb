@@ -2,13 +2,37 @@ class DecksController < ApplicationController
   before_action :require_logged_in
   before_action :require_user_owns_deck!, only: [:edit, :update]
 
-  def new
-    @user =
-    @deck = Deck.new(deck_params)
-  end
+  # def new
+  #   @deck = Deck.new
+  #   render :new
+  # end
 
   def create
+    @deck = current_user.decks.new(deck_params)
+    if @deck.save
+      render :show
+    else
+      render json: @deck.errors.full_messages, status: 422
+    end
+  end
 
+  def show
+    @deck = Deck.find(params[:id])
+    render :show
+  end
+
+  # def edit
+  #   @deck = Deck.find(params[:id])
+  #   render :edit
+  # end
+
+  def update
+    @deck = Deck.find(params[:id])
+    if @deck.update(deck_params)
+      render :show
+    else
+      render json: @deck.errors.full_messages, status: 422 #probably
+    end
   end
 
   private
