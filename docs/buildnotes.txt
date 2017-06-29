@@ -74,7 +74,7 @@ holy shit im spending way too long just thinking about fuggin routes m8
 
 omg its controller time. then views. then fuggin frontend.
 
-ALSO BATTLES TABLE TO DO ACTUAL BATTLES. I SHOULD PROB DO THAT FIRST.
+ALSO BATTLES TABLE TO DO ACTUAL BATTLES. I SHOULD PROB DO THAT FIRST. --p done
 AND WINS AND LOSSES FOR USERS. --fixed
 and maybe figure out limiting deck to 30 in backend.
 also allow 2 of same cards in a deck -- FIXED
