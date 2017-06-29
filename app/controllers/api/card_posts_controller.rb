@@ -1,4 +1,4 @@
-class CardPostsController < ApplicationController
+class Api::CardPostsController < ApplicationController
 
   def new
     @post = CardPost.new
@@ -6,11 +6,12 @@ class CardPostsController < ApplicationController
   end
 
   def create
-    @post = CardPost.new(post_params)
+    @post = current_user.card_posts.new(post_params)
     if @post.save
       render :show
     else
       render json: @post.errors.full_messages, status: 422
+    end
   end
 
   def index
@@ -19,7 +20,7 @@ class CardPostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = CardPost.find(params[:id])
     render :show
   end
 

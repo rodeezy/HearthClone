@@ -115,3 +115,9 @@ prolly wanna make a cardposts index. that would be interesting and straightforwa
 
 CONTROLLERS:
 cardposts- done
+
+
+shit... might wanna make comments more flexible
+i.e. like no replies. just comments can be on comments too.
+
+maybe also a 1-10 rating and you can sort by net votes, or by average rating.
