@@ -98,3 +98,5 @@ something about dependent: :destroy
 got a lotta data being stored. might need to adapt later on
 
 later: make a GRAVEYARD model so that you can bring cards back from the dead
+
+now that i got the battle stuff set up, im gonna focus on the other stuff to crowdsource card ideas before the game is made
