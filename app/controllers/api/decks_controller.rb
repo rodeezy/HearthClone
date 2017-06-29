@@ -1,6 +1,6 @@
 class Api::DecksController < ApplicationController
-  before_action :require_logged_in
-  before_action :require_user_owns_deck!, only: [:edit, :update]
+  # before_action :require_logged_in
+  # before_action :require_user_owns_deck!, only: [:edit, :update]
 
   # def new
   #   @deck = Deck.new
