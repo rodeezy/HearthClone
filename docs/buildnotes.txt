@@ -127,3 +127,7 @@ working on ImagePostsController. potentially will have a lot to test
 (CANT REALLY DO THAT YET)
 
 i'll probably need to do some shit so that people can't upvote/downvote a post multiple times
+
+gonna remove replies aaannndd i think thats it.
+then gonna go run at the gym a bit.
+and first thing to figure out when im back is probably upvote/downvote stuff
