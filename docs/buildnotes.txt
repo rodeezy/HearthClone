@@ -102,4 +102,16 @@ later: make a GRAVEYARD model so that you can bring cards back from the dead
 now that i got the battle stuff set up, im gonna focus on the other stuff to crowdsource card ideas before the game is made
 
 right now users/1/decks/1 json will say invalid credentials, but users/1 will show the deck's content...
-also it's 10:39PM, so break time i think...
+also it's 10:39PM, so break time i think... --day2: removed decks from users partial. others shouldn't even see how many decks you have or their names. could give shit away.
+
+DAY 2
+there's a bench icon in the tab (header) (from benchbnb probs obvs)
+
+also, time to do posts views/controllers and such. here we go
+
+prolly has to be CardPostsController, not PostsController duh
+
+prolly wanna make a cardposts index. that would be interesting and straightforward for the user.
+
+CONTROLLERS:
+cardposts- done
