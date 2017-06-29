@@ -44,3 +44,30 @@ Samesies for decks and classes ('warlock','mage',...)
 might wanna make validation that decks have 30 cards. also might not need a deckcard model.
 
 so "class" and "type" for column names are no-no's
+
+time for routes:
+  cards:
+    you should be able to see all cards.
+
+no index in image post routes because that will be in card post route
+
+these routes seem really like subjective in terms of how to set them up. May come back to them
+
+nested routes have new and edit and show (if applicable)
+
+deleting a lot of nested routes:
+    " resources :image_posts, only: [:create] do
+      resources :comments, only: [:new, :edit]
+    end
+resources :comments, only: [:create, :update, :destroy] do #destroying a comment may need fuxing with replies
+      resources :replies, only: [:new, :edit]
+    end
+resources :users, only: [:create, :new, :show] do
+      resources :decks, only: [:new, :show, :edit]
+    end
+resources :card_posts, path: "posts", only: [:new, :create, :index, :show] do #maybe add destroy; no edit tho
+      resources :image_posts, only: [:new, :show]
+      resources :comments, only: [:new, :edit]
+    end "
+
+holy shit im spending way too long just thinking about fuggin routes m8
