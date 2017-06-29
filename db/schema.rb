@@ -10,10 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170629024512) do
+ActiveRecord::Schema.define(version: 20170629033526) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "battle_cards", force: :cascade do |t|
+    t.integer  "battle_deck_id"
+    t.integer  "hand_id"
+    t.integer  "field_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "battle_decks", force: :cascade do |t|
+    t.integer  "battle_side_id", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "battle_sides", force: :cascade do |t|
+    t.integer  "player_id",               null: false
+    t.integer  "deck_id",                 null: false
+    t.integer  "health",     default: 30
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+    t.integer  "battle_id",               null: false
+  end
+
+  create_table "battles", force: :cascade do |t|
+    t.boolean  "in_progress", default: true
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
 
   create_table "card_posts", force: :cascade do |t|
     t.integer  "author_id",               null: false
@@ -67,6 +96,18 @@ ActiveRecord::Schema.define(version: 20170629024512) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["owner_id"], name: "index_decks_on_owner_id", using: :btree
+  end
+
+  create_table "fields", force: :cascade do |t|
+    t.integer  "battle_side_id", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "hands", force: :cascade do |t|
+    t.integer  "battle_side_id", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "image_posts", force: :cascade do |t|

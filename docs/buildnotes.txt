@@ -78,3 +78,23 @@ ALSO BATTLES TABLE TO DO ACTUAL BATTLES. I SHOULD PROB DO THAT FIRST.
 AND WINS AND LOSSES FOR USERS. --fixed
 and maybe figure out limiting deck to 30 in backend.
 also allow 2 of same cards in a deck -- FIXED
+
+creating battles: might wanna split into two battle sides-- done
+might wanna have a transaction history model later
+
+FIELD WILL HAVE BATTLECARDS BC ENCHANTMENTS N SHIT
+SO WILL BATTLEDECK AND HAND FOR THE SAME SHIT
+
+might wanna just go ahead and publish shit before battles so that people can start making cards n shit
+
+i like upvotes and downvotes. and i like a 1-10 scale. maybe a happy medium is a -5 -> 5 scale.
+kinda getting ahead of myself here
+
+got a few one to one relationships in battlesides. i wonder if in a one-to-one it matters which one is belongs_to
+and which one is has_one
+
+something about dependent: :destroy
+
+got a lotta data being stored. might need to adapt later on
+
+later: make a GRAVEYARD model so that you can bring cards back from the dead
