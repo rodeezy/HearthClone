@@ -25,6 +25,8 @@ class User < ApplicationRecord
   has_many :decks, foreign_key: :owner_id
   has_many :card_posts, foreign_key: :author_id
   has_many :image_posts, foreign_key: :author_id
+  has_many :votes
+  has_many :scales
   has_one :battle_side # change to has_one if too hard to figure out
   has_one :hand, through: :battle_side
   has_one :field, through: :battle_side

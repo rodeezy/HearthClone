@@ -12,4 +12,9 @@
 #
 
 class Scale < ApplicationRecord
+  validates :user, presence: true
+  validates :user_id, uniqueness: { scope: [:scalable_id, :scalable_type] }
+
+  belongs_to :scalable, polymorphic: true
+  belongs_to :user
 end

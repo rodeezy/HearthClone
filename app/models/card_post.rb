@@ -18,6 +18,9 @@
 #
 
 class CardPost < ApplicationRecord
+  include Votable
+  include Scalable
+
   validates :author_id, :attack, :defense, :cost, :card_type, :name, presence: true
   validates :card_type, inclusion: ['minion', 'elemental', 'beast', 'murloc', 'dragon', 'spell']
 
