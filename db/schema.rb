@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170630224059) do
+ActiveRecord::Schema.define(version: 20170630231202) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,18 +45,16 @@ ActiveRecord::Schema.define(version: 20170630224059) do
   end
 
   create_table "card_posts", force: :cascade do |t|
-    t.integer  "author_id",               null: false
+    t.integer  "author_id",   null: false
     t.text     "description"
-    t.integer  "attack",                  null: false
-    t.integer  "defense",                 null: false
-    t.integer  "cost",                    null: false
+    t.integer  "attack",      null: false
+    t.integer  "defense",     null: false
+    t.integer  "cost",        null: false
     t.string   "powerup"
-    t.integer  "upvotes",     default: 0
-    t.integer  "downvotes",   default: 0
-    t.string   "card_type",               null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.string   "name",                    null: false
+    t.string   "card_type",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name",        null: false
   end
 
   create_table "cards", force: :cascade do |t|
@@ -71,14 +69,12 @@ ActiveRecord::Schema.define(version: 20170630224059) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "author_id",                     null: false
-    t.integer  "post_id",                       null: false
-    t.text     "body",                          null: false
-    t.integer  "upvotes",           default: 0
-    t.integer  "downvotes",         default: 0
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.string   "post_type",                     null: false
+    t.integer  "author_id",         null: false
+    t.integer  "post_id",           null: false
+    t.text     "body",              null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "post_type",         null: false
     t.integer  "parent_comment_id"
   end
 
@@ -112,14 +108,12 @@ ActiveRecord::Schema.define(version: 20170630224059) do
   end
 
   create_table "image_posts", force: :cascade do |t|
-    t.integer  "author_id",               null: false
-    t.integer  "post_id",                 null: false
-    t.string   "image_url",               null: false
-    t.integer  "upvotes",     default: 0, null: false
-    t.integer  "downvotes",   default: 0, null: false
+    t.integer  "author_id",   null: false
+    t.integer  "post_id",     null: false
+    t.string   "image_url",   null: false
     t.string   "description"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "scales", force: :cascade do |t|

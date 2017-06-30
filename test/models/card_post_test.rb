@@ -9,8 +9,6 @@
 #  defense     :integer          not null
 #  cost        :integer          not null
 #  powerup     :string
-#  upvotes     :integer          default("0")
-#  downvotes   :integer          default("0")
 #  card_type   :string           not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
