@@ -1,0 +1,36 @@
+{
+  "name": "HearthClone",
+  "version": "1.0.0",
+  "description": "Sup y'all. I fuggin love HearthStone, and I have some dope ideas for a dank clone. Super excited to start a new coding project that I'm passionate about. Thank y'all for joining me.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodeezy/HearthClone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodeezy/HearthClone/issues"
+  },
+  "homepage": "https://github.com/rodeezy/HearthClone#readme",
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.1",
+    "redux-logger": "^3.0.6",
+    "webpack": "^3.0.0"
+  }
+}
