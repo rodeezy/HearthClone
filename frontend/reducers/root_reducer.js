@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-
+import { routerReducer } from 'react-router-redux'
 import SessionReducer from './session_reducer'
 
-const Root Reducer = combinedReducers({
+const RootReducer = combineReducers({
   session: SessionReducer
 })
 
