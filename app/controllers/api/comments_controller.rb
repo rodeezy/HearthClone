@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
   before_action :require_logged_in
 
   def create
-    @comment = current_user.comments.new(comment_params)
+    @comment = current_user.comments.new(params[:comment][:body])
 
     if @comment.save
       render :show
@@ -18,6 +18,11 @@ class CommentsController < ApplicationController
     else
       render json: @comment.errors.full_messages, status: 422
     end
+  end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    render json: @comment.destroy
   end
 
   private

@@ -156,5 +156,22 @@ OFFISH CHECKLIST: (mostly for update, post, delete)
   card_posts:
     - Post XX
   image_posts:
-    - 
-    -
+    - Post XX
+  comments:
+    - Post
+    - Update
+    - Delete
+  decks:
+    - Post
+    - Update
+  scales:
+    - Post
+    - Update
+    - Delete
+  votes:
+    - Post
+    - Update
+    - Delete
+
+hokay but like i could also develop this while making of the frontend.
+like #apiutil u know?

@@ -1,11 +1,6 @@
 class Api::DecksController < ApplicationController
-  # before_action :require_logged_in
-  # before_action :require_user_owns_deck!, only: [:edit, :update]
-
-  # def new
-  #   @deck = Deck.new
-  #   render :new
-  # end
+  before_action :require_logged_in
+  before_action :require_user_owns_deck!, only: [:update, :show]
 
   def create
     @deck = current_user.decks.new(deck_params)
@@ -20,11 +15,6 @@ class Api::DecksController < ApplicationController
     @deck = Deck.find(params[:id])
     render :show
   end
-
-  # def edit
-  #   @deck = Deck.find(params[:id])
-  #   render :edit
-  # end
 
   def update
     @deck = Deck.find(params[:id])
