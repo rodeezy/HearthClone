@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resource :session, only: [:create, :destroy] # might need show
 
+    resources :votes, only: [:create]
+    resources :scales, only: [:create]
+
     resources :users, only: [:create, :show] do
       resources :decks, only: [:show]
     end
@@ -17,7 +20,7 @@ Rails.application.routes.draw do
 
     resources :cards, only: [:index]
     resources :card_posts, path: "posts", only: [:create, :index, :show] do #maybe add destroy; no edit tho
-      resources :image_posts, only: [:show]
+      resources :image_posts, only: [:index, :show]
     end
 
   end

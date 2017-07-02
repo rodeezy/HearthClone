@@ -131,3 +131,20 @@ i'll probably need to do some shit so that people can't upvote/downvote a post m
 gonna remove replies aaannndd i think thats it.
 then gonna go run at the gym a bit.
 and first thing to figure out when im back is probably upvote/downvote stuff
+
+hokay. now i can test with ajax. session and users good.
+hopefully Card posts are good.
+posting is good.
+still a lil confused about voting.
+yet to check posting of image_posts and comments but i feel good about em
+also havent checked deletion or update (of comments)
+
+alright. lets do votes and check the other stuff then dey go.
+models seem chillin.
+lets change up the routes a tiny bit.
+
+views:::
+cardposts show will have comments
+and link to image_posts index
+image_posts index will have cardpost stats
+so will image_post show

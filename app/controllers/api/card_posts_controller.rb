@@ -1,5 +1,5 @@
 class Api::CardPostsController < ApplicationController
-  before_action :require_logged_in!, except: [:show, :index]
+  before_action :require_logged_in, except: [:show, :index]
 
   def create
     @post = current_user.card_posts.new(post_params)
