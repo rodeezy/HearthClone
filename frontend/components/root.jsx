@@ -1,11 +1,11 @@
 import React from 'react'
 // see protectedrouter and object
 import { Provider } from 'react-redux'
-import { Router, Route, IndexRoute } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory } from 'react-router'
 
 import App from './app'
 
-const Root = ({ store, history }) => {
+const Root = ({ store }) => {
 
   const _ensureLoggedIn = (nextState, replace) => {
     if (!store.getState().session.currentUser)
@@ -15,12 +15,10 @@ const Root = ({ store, history }) => {
 
   return (
     <Provider store={store}>
-      <Router history={history}>
-        <div>
+      <Router history={hashHistory}>
           <Route path="/" component={App}>
 
           </Route>
-        </div>
       </Router>
     </Provider>
   )
