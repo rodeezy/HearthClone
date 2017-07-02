@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resource :session, only: [:create, :destroy] # might need show
 
-    resources :votes, only: [:create]
-    resources :scales, only: [:create]
+    resources :votes, only: [:create, :update, :destroy]
+    resources :scales, only: [:create, :update, :destroy]
 
     resources :users, only: [:create, :show] do
       resources :decks, only: [:show]
@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
     resources :image_posts, only: [:create]
 
-    resources :comments, only: [:create, :update, :destroy] #destroying a comment may need fuxing with replies
+    resources :comments, only: [:create, :update, :destroy]
 
     resources :cards, only: [:index]
     resources :card_posts, path: "posts", only: [:create, :index, :show] do #maybe add destroy; no edit tho

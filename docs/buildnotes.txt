@@ -148,3 +148,13 @@ cardposts show will have comments
 and link to image_posts index
 image_posts index will have cardpost stats
 so will image_post show
+
+aight.
+OFFISH CHECKLIST: (mostly for update, post, delete)
+  already donezo:
+    users, sessions
+  card_posts:
+    - Post XX
+  image_posts:
+    - 
+    -

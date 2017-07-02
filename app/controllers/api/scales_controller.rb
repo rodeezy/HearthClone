@@ -9,6 +9,20 @@ class Api::ScalesController < ApplicationController
     end
   end
 
+  def update
+    @scale = Scale.find(params[:id])
+    if @scale.update(params[:scale][:value])
+      render :show
+    else
+      render json: @scale.errors.full_messages, status: 422
+    end
+  end
+
+  def destroy
+    @scale = Scale.find(params[:id])
+    render json: @scale.destroy
+  end
+
   private
 
   def scale_params
