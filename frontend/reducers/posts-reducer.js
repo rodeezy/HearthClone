@@ -9,7 +9,7 @@ const PostsReducer = (state = {}, action) => {
 
   switch(action.type) {
     case RECEIVE_POSTS:
-      return merge(newState, posts: action.posts)
+      return merge(newState, {posts: action.posts})
     case RECEIVE_POST:
       newState.posts.action.post.id = action.post
       return newState
@@ -17,3 +17,5 @@ const PostsReducer = (state = {}, action) => {
       return state
   }
 }
+
+export default PostsReducer

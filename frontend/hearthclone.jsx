@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.Actions = Actions
   let store = !window.currentUser ? configureStore() :
     configureStore({ session: { currentUser: window.currentUser } })
+  window.store = store
   const root = document.getElementById('root')
   ReactDOM.render(<Root store={store}/>, root)
 })
