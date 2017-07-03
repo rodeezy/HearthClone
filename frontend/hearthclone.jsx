@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom'
 import Root from './components/root'
 import configureStore from './store'
 
+//testing
+// import * as Actions from './actions/post-actions'
+
 
 document.addEventListener('DOMContentLoaded', () => {
+  // window.Actions = Actions
   let store = !window.currentUser ? configureStore() :
     configureStore({ session: { currentUser: window.currentUser } })
   const root = document.getElementById('root')
