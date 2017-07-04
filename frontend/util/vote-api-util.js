@@ -1,28 +1,32 @@
 export const createVote = data => (
   $.ajax({
     method: 'POST',
-    url: 'api/votes'
+    url: 'api/votes',
+    data
   })
 )
 
 export const createScale = data => (
   $.ajax({
     method: 'POST',
-    url: 'api/scales'
+    url: 'api/scales',
+    data
   })
 )
 
 export const updateVote = (id, data) => (
   $.ajax({
     method: 'PATCH',
-    url: `api/votes/${id}`
+    url: `api/votes/${id}`,
+    data
   })
 )
 
 export const updateScale = (id, data) => (
   $.ajax({
     method: 'PATCH',
-    url: `api/scales/${id}`
+    url: `api/scales/${id}`,
+    data
   })
 )
 
