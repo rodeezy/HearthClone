@@ -4,7 +4,7 @@ import CardPostIndex from './card-post-index'
 import { asArray } from '../../reducers/selectors'
 
 const mapStateToProps = state => ({
-  posts: state.posts.posts,
+  posts: asArray(state.posts),
 })
 
 const mapDispatchToProps = dispatch => ({

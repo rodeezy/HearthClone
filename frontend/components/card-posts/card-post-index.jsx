@@ -1,18 +1,18 @@
 import React from 'react'
+import CardPostIndexItem from './card-post-index-item'
 
 class CardPostIndex extends React.Component {
 
   componentWillMount() {
-    console.log('yo!');
     this.props.fetchPosts()
   }
 
   render() {
-    const postros = !!this.props.posts ? this.props.posts : [1,1]
     return(
-      <div>
-        {console.log('hey')}
-        {console.log(postros[1])}
+      <div className ="card-post-index">
+        {this.props.posts.map(post =>(
+          <CardPostIndexItem post={post} key={post.id}/>
+        ))}
       </div>
     )
   }

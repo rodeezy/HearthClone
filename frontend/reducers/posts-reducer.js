@@ -12,7 +12,7 @@ const PostsReducer = (state = {}, action) => {
       const posts = action.posts
       return merge(newState, posts)
     case RECEIVE_POST:
-      newState.posts.action.post.id = action.post
+      newState.posts[action.post.id] = action.post
       return newState
     default:
       return state
